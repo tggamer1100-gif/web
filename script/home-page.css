@@ -1,0 +1,579 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+  background: #ffffff;
+
+  color: #111111;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  width: 100%;
+
+  height: 80px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 60px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  position: relative;
+
+  z-index: 100;
+}
+
+/* ================================
+   LOGO
+================================ */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: #111111;
+
+  width: auto;
+  height: 100%;
+}
+
+.logo img {
+  width: 55px !important;
+  height: 55px !important;
+
+  max-width: 75px !important;
+  max-height: 75px !important;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 20%;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.nav-menu {
+  display: flex;
+
+  align-items: center;
+
+  gap: 40px;
+
+  list-style: none;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu a {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #555555;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #000000;
+}
+
+/* ACTIVE */
+
+.nav-menu a.active {
+  color: #000000;
+
+  font-weight: 600;
+}
+
+.nav-menu a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -8px;
+
+  width: 100%;
+
+  height: 2px;
+
+  background: #000000;
+
+  border-radius: 10px;
+}
+
+/* ========================================
+   GET STARTED
+======================================== */
+
+.get-started {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.get-started:hover {
+  background: #2b2b2b;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.get-started span {
+  font-size: 18px;
+
+  transition: 0.3s ease;
+}
+
+.get-started:hover span {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   SERVICES
+======================================== */
+
+#services {
+  min-height: 500px;
+
+  padding: 100px 60px;
+}
+
+#services h1 {
+  font-size: 40px;
+
+  margin-bottom: 15px;
+}
+
+#services p {
+  color: #666666;
+}
+
+/* ========================================
+   POPUP OVERLAY
+======================================== */
+
+.contact-overlay {
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  backdrop-filter: blur(7px);
+
+  -webkit-backdrop-filter: blur(7px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  z-index: 9999;
+}
+
+/* ========================================
+   POPUP ACTIVE
+======================================== */
+
+.contact-overlay.show {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+/* ========================================
+   POPUP BOX
+======================================== */
+
+.contact-box {
+  position: relative;
+
+  width: 420px;
+
+  max-width: calc(100% - 40px);
+
+  padding: 42px;
+
+  background: rgba(20, 20, 20, 0.96);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 24px;
+
+  color: #ffffff;
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+
+  transform: scale(0.85) translateY(20px);
+
+  transition: transform 0.3s ease;
+}
+
+/* POPUP ANIMATION */
+
+.contact-overlay.show .contact-box {
+  transform: scale(1) translateY(0);
+}
+
+/* ========================================
+   POPUP TITLE
+======================================== */
+
+.contact-box h2 {
+  margin: 0;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+/* ========================================
+   POPUP DESCRIPTION
+======================================== */
+
+.contact-box p {
+  margin-top: 7px;
+
+  margin-bottom: 28px;
+
+  color: #a5a5a5;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.close-btn {
+  position: absolute;
+
+  top: 24px;
+
+  right: 25px;
+
+  width: 35px;
+
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  transition: 0.2s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  transform: rotate(90deg);
+}
+
+/* ========================================
+   CONTACT MENU
+======================================== */
+
+.contact-menu {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+/* ========================================
+   CONTACT ITEM
+======================================== */
+
+.contact-item {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.03);
+
+  border-radius: 16px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.13);
+
+  border-color: rgba(255, 255, 255, 0.1);
+
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   CONTACT ICON
+======================================== */
+
+.contact-icon {
+  width: 55px;
+
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border-radius: 14px;
+
+  font-size: 25px;
+}
+
+/* ========================================
+   CONTACT TEXT
+======================================== */
+
+.contact-item strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.contact-item small {
+  display: block;
+
+  color: #999999;
+
+  font-size: 14px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 30px;
+  }
+
+  .nav-menu {
+    gap: 25px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .navbar {
+    height: auto;
+
+    min-height: 70px;
+
+    padding: 15px 20px;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+  }
+
+  .logo img {
+    width: 45px;
+
+    height: 45px;
+  }
+
+  .nav-menu {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  .nav-menu a {
+    font-size: 13px;
+  }
+
+  .get-started {
+    padding: 10px 15px;
+
+    font-size: 13px;
+  }
+
+  .contact-box {
+    width: 380px;
+
+    max-width: calc(100% - 30px);
+
+    padding: 35px 25px;
+  }
+
+  .contact-box h2 {
+    font-size: 26px;
+  }
+}
+
+/* ========================================
+   SMALL PHONE
+======================================== */
+
+@media (max-width: 450px) {
+  .navbar {
+    padding: 12px 15px;
+  }
+
+  .nav-menu {
+    gap: 12px;
+  }
+
+  .nav-menu a {
+    font-size: 12px;
+  }
+
+  .get-started {
+    padding: 9px 12px;
+
+    font-size: 12px;
+  }
+
+  .contact-box {
+    padding: 32px 20px;
+
+    border-radius: 20px;
+  }
+
+  .contact-box h2 {
+    font-size: 24px;
+  }
+
+  .contact-item {
+    padding: 15px;
+
+    gap: 14px;
+  }
+
+  .contact-icon {
+    width: 48px;
+
+    height: 48px;
+
+    font-size: 21px;
+  }
+}

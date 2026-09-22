@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Darussholah</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="home-page.css" />
+  </head>
+
+  <body>
+    <!-- ======================================
+       NAVBAR
+  ======================================= -->
+
+    <header class="navbar">
+      <!-- LOGO -->
+
+      <a href="home-page.html" class="logo">
+        <img src="logo.png" alt="Logo" />
+        <h1>Darussholah</h1>
+      </a>
+      <!-- NAVIGATION -->
+
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a href="index.html"> Home </a>
+          </li>
+
+          <li>
+            <a href="About.html" class="active"> About </a>
+          </li>
+
+          <li>
+            <a href="portfolio.html"> Portfolio </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- GET STARTED -->
+
+      <button class="get-started" id="getStarted">
+        Get Started
+
+        <span>→</span>
+      </button>
+    </header>
+
+    <!-- ======================================
+       CONTACT POPUP
+  ======================================= -->
+
+    <div class="contact-overlay" id="contactPopup">
+      <div class="contact-box">
+        <!-- CLOSE -->
+
+        <button class="close-btn" id="closePopup" aria-label="Close">×</button>
+
+        <!-- TITLE -->
+
+        <h2>Let's Connect</h2>
+
+        <p>Pilih cara untuk menghubungi saya</p>
+
+        <!-- CONTACT MENU -->
+
+        <div class="contact-menu">
+          <!-- WHATSAPP -->
+
+          <a
+            href="https://wa.me/628XXXXXXXXXX"
+            target="_blank"
+            class="contact-item"
+          >
+            <span class="contact-icon"> 💬 </span>
+
+            <div>
+              <strong> WhatsApp </strong>
+
+              <small> Chat dengan saya </small>
+            </div>
+          </a>
+
+          <!-- INSTAGRAM -->
+
+          <a
+            href="https://www.instagram.com/majelisdarussholah/"
+            target="_blank"
+            class="contact-item"
+          >
+            <span class="contact-icon"> ◎ </span>
+
+            <div>
+              <strong> Instagram </strong>
+
+              <small> @majelisdarussholah</small>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================
+       JAVASCRIPT
+  ======================================= -->
+
+    <script src="home.js"></script>
+  </body>
+</html>
